@@ -1,0 +1,39 @@
+﻿.content-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#dash-users {
+    width: 30%;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+#dash-earn {
+    width: 30%;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+#dash-orders {
+    width: 30%;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+@media (max-width: 600px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+}

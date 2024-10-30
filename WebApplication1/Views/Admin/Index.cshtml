@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminPanel.cshtml";
+}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Quản Trị</title>
+    <link rel="stylesheet" href="~/Content/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+</head>
+
+<body>
+    <div class="content-container">
+        <h2>DASHBOARD</h2>
+        <section class="container">
+            <div id="dash-users">
+                <h4>Tổng số người dùng</h4>
+                <h5>5.000</h5>
+            </div>
+            <div id="dash-earn">
+                <h4>Tổng doanh thu</h4>
+                <h5>155.292.334</h5>
+            </div>
+            <div id="dash-orders">
+                <h4>Tổng đơn hàng</h4>
+                <h5>121421</h5>
+            </div>
+        </section>
+        <canvas id="product-sold-chart" style="width:100%;max-width:600px"></canvas>
+
+        <script>
+            const xValues = ["Laptop", "Smart Watch", "PC", "Phụ kiện", "Khác"];
+            const yValues = [55, 49, 44, 24, 15];
+            const barColors = [
+                "#b91d47",
+                "#00aba9",
+                "#2b5797",
+                "#e8c3b9",
+                "#1e7145"
+            ];
+
+            new Chart("product-sold-chart", {
+                type: "pie",
+                data: {
+                    labels: xValues,
+                    datasets: [{
+                        backgroundColor: barColors,
+                        data: yValues
+                    }]
+                },
+                options: {
+                    title: {
+                        display: true,
+                        text: "Tổng hợp sản phẩm đã bán"
+                    }
+                }
+            });
+        </script>
+
+    </div>
+    
+</body>
