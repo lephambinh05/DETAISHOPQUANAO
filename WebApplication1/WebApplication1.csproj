@@ -157,37 +157,37 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AdminUser.cs">
-      <DependentUpon>DBEntities.tt</DependentUpon>
+      <DependentUpon>DBSportStore.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Category.cs">
-      <DependentUpon>DBEntities.tt</DependentUpon>
+      <DependentUpon>DBSportStore.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Customer.cs">
-      <DependentUpon>DBEntities.tt</DependentUpon>
+      <DependentUpon>DBSportStore.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DBEntities.Context.cs">
+    <Compile Include="Models\DBSportStore.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBEntities.Context.tt</DependentUpon>
+      <DependentUpon>DBSportStore.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DBEntities.cs">
+    <Compile Include="Models\DBSportStore.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBEntities.tt</DependentUpon>
+      <DependentUpon>DBSportStore.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DBEntities.Designer.cs">
+    <Compile Include="Models\DBSportStore.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBEntities.edmx</DependentUpon>
+      <DependentUpon>DBSportStore.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\OrderDetail.cs">
-      <DependentUpon>DBEntities.tt</DependentUpon>
+      <DependentUpon>DBSportStore.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\OrderPro.cs">
-      <DependentUpon>DBEntities.tt</DependentUpon>
+      <DependentUpon>DBSportStore.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Product.cs">
-      <DependentUpon>DBEntities.tt</DependentUpon>
+      <DependentUpon>DBSportStore.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -220,22 +220,17 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Images\computer.jpg" />
-    <Content Include="Models\DBEntities.Context.tt">
+    <Content Include="img\shopping-cart.png" />
+    <Content Include="img\logoweb.png" />
+    <Content Include="Models\DBSportStore.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBEntities.edmx</DependentUpon>
-      <LastGenOutput>DBEntities.Context.cs</LastGenOutput>
+      <DependentUpon>DBSportStore.edmx</DependentUpon>
+      <LastGenOutput>DBSportStore.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\DBEntities.tt">
+    <Content Include="Models\DBSportStore.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBEntities.edmx</DependentUpon>
-      <LastGenOutput>DBEntities.cs</LastGenOutput>
-    </Content>
-    <EntityDeploy Include="Models\DBEntities.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DBEntities.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\DBEntities.edmx.diagram">
-      <DependentUpon>DBEntities.edmx</DependentUpon>
+      <DependentUpon>DBSportStore.edmx</DependentUpon>
+      <LastGenOutput>DBSportStore.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -243,6 +238,13 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\DBSportStore.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DBSportStore.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\DBSportStore.edmx.diagram">
+      <DependentUpon>DBSportStore.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
     <Content Include="Scripts\jquery-3.7.1.min.js" />
@@ -266,14 +268,11 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Masterlayout.cshtml" />
     <Content Include="Views\Home\Test.cshtml" />
     <Content Include="Views\Shared\_MasterLayout3.cshtml" />
     <Content Include="Views\Home\Trangchu.cshtml" />
-    <Content Include="Views\Home\Dangky.cshtml" />
     <Content Include="Views\Home\DestopComputer.cshtml" />
     <Content Include="Views\Categories\Create.cshtml" />
     <Content Include="Views\Product\Index.cshtml" />
@@ -285,6 +284,7 @@
     <Content Include="Views\Shared\AdminPanel.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\Create.cshtml" />
+    <Content Include="Views\Home\Dangky.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

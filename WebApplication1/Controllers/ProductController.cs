@@ -12,21 +12,21 @@ namespace WebApplication1.Controllers
     public class ProductController : Controller
     {
         DBSportStoreEntities database = new DBSportStoreEntities();
-         
+
         // GET: Product
         public ActionResult Index()
         {
             return View(database.Products.ToList());
         }
-        public ActionResult Creat() 
+        public ActionResult Creat()
         {
             Product pro = new Product();
             return View(pro);
         }
-        public ActionResult SelectCate() 
+        public ActionResult SelectCate()
         {
             Category se_cate = new Category();
-            se_cate.listcate = database.Categories.ToList<Category>();
+            se_cate.NameCate = database.Categories.ToList<Category>();
             return PartialView(se_cate);
         }
         [HttpPost]

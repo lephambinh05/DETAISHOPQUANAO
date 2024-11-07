@@ -1,28 +1,81 @@
 ﻿<!DOCTYPE html>
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    <link href="~/Content/mystyle.css" rel="stylesheet"/>
+    <link href="~/Content/style.css" rel="stylesheet" />
 </head>
 <body>
-    <div id="div-top">
-    </div>
-    <div id="div-main">
-        <div id="div-left">
-            <h3>Danh mục sản phẩm </h3>
-            <ul style="list-style:none;">
-                <li><a href="Trangchu">Laptop</a></li>
-                <li><a href="DestopComputer">Máy tính để bàn</a></li>
-                <li>Điện thoại</li>
-                <li>Phụ kiện</li>
+    <div class="item">
+        <nav>
+            <div class="logoweb">
+                <img src="~/img/logowe.png" alt="store-quan-ao">
+                <p>STORE QUẦN ÁO</p>
+            </div>
+            <ul>
+                <li><a href="TrangChu">TRANG CHỦ</a></li>
+                <li class="dropdown">
+                    <a href="#">ÁO NAM</a>
+                    <div class="dropdown-content">
+                        <a href="#">Gucci</a> <hr>
+                        <a href="#">Burberry</a> <hr>
+                        <a href="#">Dsquared2</a> <hr>
+                        <a href="#">Dolce & Gabbana</a> <hr>
+                        <a href="#">Versace</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">QUẦN NAM</a>
+                    <div class="dropdown-content">
+                        <a href="#">Dsquared2</a> <hr>
+                        <a href="#">Dolce & Gabbana</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">ÁO KHOÁC NAM</a>
+                    <div class="dropdown-content">
+                        <a href="#">Gucci</a> <hr>
+                        <a href="#">Dsquared2</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">DÉP NAM</a>
+                    <div class="dropdown-content">
+                        <a href="#">Gucci</a> <hr>
+                        <a href="#">Burberry</a> <hr>
+                        <a href="#">Dsquared2</a> <hr>
+                        <a href="#">Dolce & Gabbana</a> <hr>
+                        <a href="#">Versace</a>
+                    </div>
+                </li>
             </ul>
-        </div>
+            <div class="cart">
+                <a href="giohang.html">
+                    <img src="~/img/shopping-car.png" alt="Giỏ hàng">
+                </a>
+            </div>
+            <div class="login">
+                <a href="/Home/Dangnhap">Login</a>
+            </div>
+            <div class="register">
+                <a href="/Home/Dangky">Register</a>
+            </div>
+            <div class="cart">
+                <a href="giohang.html">
+                    <img src="IMG/shopping-cart (1).png" alt="Giỏ hàng">
+                </a>
+            </div>
+        </nav>
+    </div>
+    <marquee class="marquee" behavior="" direction="left">
+        SIÊU SALE MÙA HÈ GIẢM GIÁ SỐC LÊN ĐẾN 30%
+    </marquee>
+
+    <div id="div-main">
         <div id="div-containt">
             @RenderBody()
         </div>
     </div>
-    <div id="div-footer">Trường Đại Học Ngoại ngữ-Tin học Tp.HCM</div>
+
 </body>
 </html>

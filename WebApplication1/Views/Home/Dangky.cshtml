@@ -1,8 +1,97 @@
-﻿
+﻿@model WebApplication1.Models.Customer
+
 @{
     ViewBag.Title = "Dangky";
     Layout = "~/Views/Shared/_MasterLayout3.cshtml";
 }
 
-<h2>Dangky</h2>
+<head>
+    <link rel="stylesheet" href="~/Content/style.css" />
+</head>
+ 
+@using(Html.BeginForm("Dangky", "Home", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
 
+    <div id="loginBox" class="form-horizontal">
+        <h4>Thông tin đăng ký</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            <label class="control-label">
+                Tên đăng nhập
+            </label>
+            <div>
+                @Html.EditorFor(model => model.NameCus, new { htmlAttributes = new { @class = "form-control", placeholder = "Nhập tên của bạn" } })
+                @Html.ValidationMessageFor(model => model.NameCus, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">
+                Số điện thoại
+            </label>
+            <div>
+                @Html.EditorFor(model => model.PhoneCus, new { htmlAttributes = new { @class = "form-control", placeholder = "Nhập số điện thoại" } })
+                @Html.ValidationMessageFor(model => model.PhoneCus, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">
+                Mật khẩu
+            </label>
+            <div>
+                @Html.EditorFor(model => model.PassCus, new { htmlAttributes = new { @class = "form-control", placeholder = "Nhập mật khẩu" } })
+                @Html.ValidationMessageFor(model => model.PassCus, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-default">Đăng ký</button>
+        </div>
+    </div>
+}
+
+
+<script>
+    function showNotification(message, isSuccess) {
+        var notification = document.getElementById("notification");
+        notification.innerText = message;
+        notification.classList.add("show");
+
+        if (!isSuccess) {
+            notification.classList.add("error");
+        }
+
+        // Hiển thị thông báo trong 3 giây
+        setTimeout(function() {
+            notification.classList.remove("show");
+            // Sau khi ẩn thông báo, chuyển hướng đến trang đăng nhập
+            if (isSuccess) {
+                window.location.href = "Login";
+            }
+        }, 3000); // Thời gian hiển thị thông báo là 3 giây
+    }
+
+    // Hiển thị thông báo khi đăng ký thành công
+    @if (ViewBag.Success != null)
+    {
+        <text>
+            window.onload = function() {
+                showNotification("@ViewBag.Success", true);
+            };
+        </text>
+    }
+
+    // Hiển thị thông báo khi có lỗi
+    @if (ViewBag.Error != null)
+    {
+        <text>
+            window.onload = function() {
+                showNotification("@ViewBag.Error", false);
+            };
+        </text>
+    }
+</script>
