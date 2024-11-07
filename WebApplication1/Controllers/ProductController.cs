@@ -11,7 +11,7 @@ namespace WebApplication1.Controllers
 {
     public class ProductController : Controller
     {
-        DBSportStoreEntities database = new DBSportStoreEntities();
+        DBFashionStoreEntities database = new DBFashionStoreEntities();
 
         // GET: Product
         public ActionResult Index()
@@ -23,33 +23,6 @@ namespace WebApplication1.Controllers
             Product pro = new Product();
             return View(pro);
         }
-        public ActionResult SelectCate()
-        {
-            Category se_cate = new Category();
-            se_cate.NameCate = database.Categories.ToList<Category>();
-            return PartialView(se_cate);
-        }
-        [HttpPost]
-        public ActionResult Create(Product pro)
-        {
-            try
-            {
-                if (pro.UploadImage != null)
-                {
-                    string filename = Path.GetFileNameWithoutExtension(pro.UploadImage.FileName);
-                    string extent = Path.GetExtension(pro.UploadImage.FileName);
-                    filename = filename + extent;
-                    pro.ImagePro = "~/Content/images/" + filename;
-                    pro.UploadImage.SaveAs(Path.Combine(Server.MapPath("~/Content/images/"), filename));
-                }
-                database.Products.Add(pro);
-                database.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
+        
     }
 }

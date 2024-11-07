@@ -10,7 +10,7 @@ namespace WebApplication1.Controllers
     public class LoginUserController : Controller
     {
 
-        DBSportStoreEntities database = new DBSportStoreEntities();
+        DBFashionStoreEntities database = new DBFashionStoreEntities();
         public ActionResult Index()
         {
             return View();

@@ -22,10 +22,11 @@ namespace WebApplication1.Models
     
         public int ID { get; set; }
         public Nullable<System.DateTime> DateOrder { get; set; }
-        public Nullable<int> IDCus { get; set; }
+        public string CustomerName { get; set; }
+        public string PhoneCustomer { get; set; }
         public string AddressDeliverry { get; set; }
+        public Nullable<decimal> TotalAmount { get; set; }
     
-        public virtual Customer Customer { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }

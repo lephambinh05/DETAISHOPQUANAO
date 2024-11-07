@@ -157,37 +157,34 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AdminUser.cs">
-      <DependentUpon>DBSportStore.tt</DependentUpon>
+      <DependentUpon>DBFashionStore.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Category.cs">
-      <DependentUpon>DBSportStore.tt</DependentUpon>
+      <DependentUpon>DBFashionStore.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Customer.cs">
-      <DependentUpon>DBSportStore.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\DBSportStore.Context.cs">
+    <Compile Include="Models\DBFashionStore.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBSportStore.Context.tt</DependentUpon>
+      <DependentUpon>DBFashionStore.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DBSportStore.cs">
+    <Compile Include="Models\DBFashionStore.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBSportStore.tt</DependentUpon>
+      <DependentUpon>DBFashionStore.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DBSportStore.Designer.cs">
+    <Compile Include="Models\DBFashionStore.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBSportStore.edmx</DependentUpon>
+      <DependentUpon>DBFashionStore.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\OrderDetail.cs">
-      <DependentUpon>DBSportStore.tt</DependentUpon>
+      <DependentUpon>DBFashionStore.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\OrderPro.cs">
-      <DependentUpon>DBSportStore.tt</DependentUpon>
+      <DependentUpon>DBFashionStore.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Product.cs">
-      <DependentUpon>DBSportStore.tt</DependentUpon>
+      <DependentUpon>DBFashionStore.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -222,15 +219,15 @@
     <Content Include="Images\computer.jpg" />
     <Content Include="img\shopping-cart.png" />
     <Content Include="img\logoweb.png" />
-    <Content Include="Models\DBSportStore.Context.tt">
+    <Content Include="Models\DBFashionStore.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBSportStore.edmx</DependentUpon>
-      <LastGenOutput>DBSportStore.Context.cs</LastGenOutput>
+      <DependentUpon>DBFashionStore.edmx</DependentUpon>
+      <LastGenOutput>DBFashionStore.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\DBSportStore.tt">
+    <Content Include="Models\DBFashionStore.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBSportStore.edmx</DependentUpon>
-      <LastGenOutput>DBSportStore.cs</LastGenOutput>
+      <DependentUpon>DBFashionStore.edmx</DependentUpon>
+      <LastGenOutput>DBFashionStore.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -238,12 +235,12 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\DBSportStore.edmx">
+    <EntityDeploy Include="Models\DBFashionStore.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DBSportStore.Designer.cs</LastGenOutput>
+      <LastGenOutput>DBFashionStore.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\DBSportStore.edmx.diagram">
-      <DependentUpon>DBSportStore.edmx</DependentUpon>
+    <Content Include="Models\DBFashionStore.edmx.diagram">
+      <DependentUpon>DBFashionStore.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />

@@ -10,7 +10,7 @@ namespace WebApplication1.Controllers
 {
     public class HomeController : Controller
     {
-        private DBSportStoreEntities database = new DBSportStoreEntities();
+        private DBFashionStoreEntities database = new DBFashionStoreEntities();
         public ActionResult Test()
         {
 
@@ -21,33 +21,7 @@ namespace WebApplication1.Controllers
 
             return View();
         }
-        public ActionResult Dangky()
-        {
-
-            return View();
-        }
-        [HttpPost]
-        public ActionResult Dangky(Customer cus)
-        {
-            if (ModelState.IsValid)
-            {
-                var check_username = database.Customers.Where(s => s.NameCus == cus.NameCus && s.PassCus == cus.PassCus).FirstOrDefault();
-                if (check_username == null) //chua co user  
-                {
-                    database.Configuration.ValidateOnSaveEnabled = false;
-                    database.Customers.Add(cus);
-                    database.SaveChanges();
-                    return RedirectToAction("Index");
-                }
-                else
-                {
-                    ViewBag.ErrorRegister = "This username is exixst";
-                    return View();
-                }
-            }
-            return View();
-        }
-
+        
         public ActionResult Chitietsanpham()
         {
             return View();
