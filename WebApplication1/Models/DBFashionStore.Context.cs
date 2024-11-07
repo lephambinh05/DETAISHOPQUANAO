@@ -13,10 +13,10 @@ namespace WebApplication1.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DBSportStoreEntities : DbContext
+    public partial class DBFashionStoreEntities : DbContext
     {
-        public DBSportStoreEntities()
-            : base("name=DBSportStoreEntities")
+        public DBFashionStoreEntities()
+            : base("name=DBFashionStoreEntities")
         {
         }
     
@@ -27,7 +27,6 @@ namespace WebApplication1.Models
     
         public virtual DbSet<AdminUser> AdminUsers { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
-        public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<OrderDetail> OrderDetails { get; set; }
         public virtual DbSet<OrderPro> OrderProes { get; set; }
         public virtual DbSet<Product> Products { get; set; }

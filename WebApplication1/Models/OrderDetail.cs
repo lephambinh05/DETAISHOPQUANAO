@@ -18,7 +18,7 @@ namespace WebApplication1.Models
         public Nullable<int> IDProduct { get; set; }
         public Nullable<int> IDOrder { get; set; }
         public Nullable<int> Quantity { get; set; }
-        public Nullable<double> UnitPrice { get; set; }
+        public Nullable<decimal> UnitPrice { get; set; }
     
         public virtual OrderPro OrderPro { get; set; }
         public virtual Product Product { get; set; }
